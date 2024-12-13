@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>✏️ Edit Task</h1>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <form method="POST" class="row g-3">
+            <div class="col-12">
+                <label for="title" class="form-label">Task Title</label>
+                <input type="text" id="title" name="title" value="{{ task.title }}" 
+                       class="form-control" required>
+            </div>
+            <div class="col-12 d-flex justify-content-end">
+                <a href="{{ url_for('index') }}" class="btn btn-secondary me-2">Cancel</a>
+                <button type="submit" class="btn btn-success">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
